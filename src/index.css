@@ -8,25 +8,25 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 25% 98%;
+    --background: 210 15% 96%;
     --foreground: 220 15% 15%;
 
-    --card: 0 0% 100%;
+    --card: 210 10% 99%;
     --card-foreground: 220 15% 15%;
 
-    --popover: 0 0% 100%;
+    --popover: 210 10% 99%;
     --popover-foreground: 220 15% 15%;
 
-    --primary: 214 85% 45%;
+    --primary: 214 55% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 20% 96%;
+    --secondary: 210 15% 93%;
     --secondary-foreground: 220 15% 25%;
 
-    --muted: 210 20% 94%;
+    --muted: 210 15% 91%;
     --muted-foreground: 220 10% 50%;
 
-    --accent: 25 85% 55%;
+    --accent: 25 55% 52%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -37,10 +37,10 @@ All colors MUST be HSL.
     --ring: 214 85% 45%;
 
     /* Custom design tokens for Ünal Petrol */
-    --primary-glow: 214 85% 65%;
-    --energy-orange: 25 85% 55%;
-    --trust-blue: 214 85% 45%;
-    --clean-blue: 210 25% 98%;
+    --primary-glow: 214 45% 58%;
+    --energy-orange: 25 55% 52%;
+    --trust-blue: 214 55% 42%;
+    --clean-blue: 210 15% 96%;
     
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
@@ -127,5 +127,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--muted)) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsl(var(--muted)) 1px, transparent 1px),
+      linear-gradient(135deg, transparent 40%, hsl(var(--background)) 50%, transparent 60%);
+    background-size: 60px 60px, 40px 40px, 100% 100%;
+    background-position: 0 0, 30px 30px, 0 0;
   }
 }
