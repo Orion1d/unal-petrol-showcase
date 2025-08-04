@@ -37,9 +37,9 @@ const Hero = () => {
               Şubelerimizi Keşfedin
             </Button>
             <Button 
-              variant="outline" 
+              variant="hero" 
               size="lg"
-              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-4 text-lg font-semibold transition-all duration-300"
+              className="px-8 py-4 text-lg font-semibold transition-all duration-300"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               İletişim Bilgileri
